@@ -34,6 +34,13 @@ const Header = () => {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+  const handleNavClick = (id) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Close mobile menu if open
+    }
+  };
 
   return (
     <header
@@ -53,14 +60,21 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a
+            // <a
+            //   key={link.name}
+            //   href={link.href}
+            //   className={`transition-colors ${scrolled ? "text-white hover:text-primary" : "text-foreground/80 hover:text-primary"
+            //     }`}
+            // >
+            //   {link.name}
+            // </a>
+            <button
               key={link.name}
-              href={link.href}
-              className={`transition-colors ${scrolled ? "text-white hover:text-primary" : "text-foreground/80 hover:text-primary"
-                }`}
+              onClick={() => handleNavClick(link.href)}
+              className="text-foreground/80 hover:text-primary py-2 text-left"
             >
               {link.name}
-            </a>
+            </button>
           ))}
           <Button onClick={toggleTheme} variant="ghost" size="icon">
             {theme === "light" ? (
