@@ -100,8 +100,8 @@ const About = () => {
               ))}
             </CarouselContent>
             <div className="flex justify-center gap-2 mt-4">
-              <CarouselPrevious className="static transform-none translate-y-0 mx-2" />
-              <CarouselNext className="static transform-none translate-y-0 mx-2" />
+              <CarouselPrevious className="static transform-none translate-y-0 mx-2 btn-shine rounded-full" />
+              <CarouselNext className="static transform-none translate-y-0 mx-2 btn-shine rounded-full" />
             </div>
           </Carousel>
         </div>
@@ -169,7 +169,7 @@ const About = () => {
                 </ul>
               </div>
 
-              <Button size="lg" className="shine-effect">Learn More</Button>
+              {/* <Button size="lg" className="shine-effect">Learn More</Button> */}
             </div>
           </div>
         </div>

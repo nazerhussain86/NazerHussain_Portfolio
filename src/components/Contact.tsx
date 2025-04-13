@@ -86,10 +86,9 @@ const Contact = () => {
   return (
     <section id="contact" className="section-padding">
       <div className="container mx-auto">
-        <h2 className="section-title gradient-text text-center">Get In Touch</h2>
+        <h2 className="section-title gradient-text text-center">Let's Connect</h2>
         <p className="text-center text-foreground/70 max-w-2xl mx-auto mb-16">
-          Have a project in mind or want to discuss potential opportunities?
-          I'd love to hear from you. Fill out the form below and I'll get back to you soon.
+          Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -208,7 +207,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                <Button type="submit" className="w-full btn-shine rounded-full" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>

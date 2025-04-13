@@ -23,8 +23,8 @@ const Header = () => {
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -48,9 +48,14 @@ const Header = () => {
         }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <span className="text-2xl font-bold gradient-text cursor-pointer" onClick={() => handleNavClick("#home")}>
-          Portfolio
-        </span>
+        {/* <span className="text-2xl font-bold gradient-text cursor-pointer" onClick={() => handleNavClick("#home")}>
+          Nazer.dev
+        </span> */}
+        <a
+          onClick={() => handleNavClick("#home")}
+          className="text-2xl font-serif font-bold">
+          <span className="text-2xl font-bold gradient-text cursor-pointer">Nazer.dev</span>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">

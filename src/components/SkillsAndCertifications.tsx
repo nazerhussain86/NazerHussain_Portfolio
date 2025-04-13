@@ -91,7 +91,7 @@ const SkillsAndCertifications = () => {
     {
       id: "c4",
       title: "Python Zero to Hero",
-      issuer: "GUVI Geek Networks, IITM Research Park",
+      issuer: "GUVI Geek Networks, IITM Madras",
       date: "Sep 2024",
       credentialId: "60211b22yLRH57688k",
       skills: [
@@ -106,7 +106,7 @@ const SkillsAndCertifications = () => {
     {
       id: "c5",
       title: "HTML and CSS",
-      issuer: "GUVI Geek Networks, IITM Research Park",
+      issuer: "GUVI Geek Networks, IITM Madras",
       date: "Sep 2024",
       credentialId: "iN1769765u20rD9vmy",
       skills: [
@@ -121,14 +121,14 @@ const SkillsAndCertifications = () => {
     {
       id: "c6",
       title: "JavaScript",
-      issuer: "GUVI Geek Networks, IITM Research Park",
+      issuer: "GUVI Geek Networks, IITM Madras",
       date: "Sep 2024",
       credentialId: "6O7i1v7V3GF8b92673",
       skills: ["Artificial Intelligence (AI)", "ASP.NET MVC", "jQuery"],
       icon: <Code className="h-10 w-10 text-primary" />,
       logo: "/guvi-logo.svg",
     },
-   
+
   ];
 
   const skillCategories: SkillCategory[] = [
@@ -314,7 +314,7 @@ const SkillsAndCertifications = () => {
                       </div>
                       <div className="flex items-center text-sm text-foreground/70">
                         <CheckSquare className="h-4 w-4 mr-2 text-primary" />
-                        <span>@ {cert.issuer}</span>
+                        <span>{cert.issuer}</span>
                       </div>
                       <div className="flex items-center text-sm text-foreground/70">
                         <CheckSquare className="h-4 w-4 mr-2 text-primary" />

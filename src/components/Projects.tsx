@@ -97,7 +97,8 @@ const Projects = () => {
           Professional Projects
         </h2>
         <p className="text-center text-foreground/70 max-w-3xl mx-auto mb-16">
-          A selection of my professional development work, showcasing expertise in backend development, API integration, and scalable application design.
+          A selection of my professional development work at SCMCube Technologies, demonstrating
+          my expertise in backend development, API integration, and application design.
         </p>
 
         <div className="space-y-12">
@@ -158,9 +159,9 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button size="lg">View All Projects</Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

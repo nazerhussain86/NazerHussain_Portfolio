@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const programmingLanguages = [
@@ -67,15 +67,15 @@ const Hero = () => {
           <p
             className={`text-lg mb-6 max-w-xl `}
           >
-            Software developer dedicated to crafting innovative, user-centric digital experiences. I build scalable, efficient, and intuitive solutions, continuously exploring new technologies to deliver impactful results.<br/>
-            Results-driven software developer crafting high-quality, user-centric digital experiences. I deliver scalable, efficient, and intuitive solutions.<br/>
+            Software developer dedicated to crafting innovative, user-centric digital experiences. I build scalable, efficient, and intuitive solutions, continuously exploring new technologies to deliver impactful results.<br />
+            Results-driven software developer crafting high-quality, user-centric digital experiences. I deliver scalable, efficient, and intuitive solutions.<br />
           </p>
 
           {/* BUTTONS */}
           <div className="flex flex-wrap gap-4 text-center">
             <Button
               size="lg"
-              className="shine-effect hover:bg-primary/80 transition-colors"
+              className="shine-effect hover:bg-primary/80 transition-colors btn-shine rounded-full"
               onClick={() => {
                 document
                   .getElementById("projects")
@@ -87,13 +87,13 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={handleDownloadCV}
-              className="shine-effect hover:bg-primary/80 transition-colors"
+              className="shine-effect hover:bg-primary/80 transition-colors btn-shine rounded-full"
             >
               <Download size={18} /> Download CV
             </Button>
             <Button
               size="lg"
-              className="shine-effect hover:bg-primary/80 transition-colors pulse-button"
+              className="shine-effect hover:bg-primary/80 transition-colors pulse-button btn-shine rounded-full"
               onClick={() => {
                 document
                   .getElementById("contact")
@@ -102,6 +102,23 @@ const Hero = () => {
             >
               Hire Me
             </Button>
+
+          </div>
+
+          {/* Social links */}
+          <div className="mt-8 flex items-center gap-4">
+            <p className="text-sm text-foreground/60">Find me on:</p>
+            <div className="flex gap-3">
+              <a href="#" className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 transition-colors">
+                <Github size={18} />
+              </a>
+              <a href="#" className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 transition-colors">
+                <Linkedin size={18} />
+              </a>
+              <a href="#" className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 transition-colors">
+                <Twitter size={18} />
+              </a>
+            </div>
           </div>
         </div>
 
