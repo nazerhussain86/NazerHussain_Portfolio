@@ -71,11 +71,13 @@ const Hero = () => {
 
           {/* BUTTONS stay below this left side */}
           <div className="flex flex-wrap gap-4 text-center">
-            <a href="#projects" className="inline-block">
-              <Button size="lg" className="shine-effect hover:bg-primary/80 transition-colors">
-                View My Work
-              </Button>
-            </a>
+            <Button size="lg" className="shine-effect hover:bg-primary/80 transition-colors"
+              onClick={() => {
+                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              View My Work
+            </Button>
             <Button
               size="lg"
               //variant="outline"
@@ -84,16 +86,17 @@ const Hero = () => {
             >
               <Download size={18} /> Download CV
             </Button>
-            <a href="#contact" className="inline-block">
-              <Button
-                size="lg"
-                //variant="secondary"
-                className="shine-effect hover:bg-primary/80 transition-colors pulse-button"
 
-              >
-                Hire Me
-              </Button>
-            </a>
+            <Button
+              size="lg"
+              //variant="secondary"
+              className="shine-effect hover:bg-primary/80 transition-colors pulse-button"
+              onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Hire Me
+            </Button>
           </div>
         </div>
 
