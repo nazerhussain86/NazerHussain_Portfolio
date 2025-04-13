@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, Phone,Github, Linkedin, } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, } from "lucide-react";
 import { useState } from "react";
-
+import emailjs from "emailjs-com";
 
 
 const Contact = () => {
@@ -28,19 +28,38 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    const serviceID = "service_1mqwy5a"; // 👈 replace
+    const templateID = "template_qos3jlw"; // 👈 replace
+    const publicKey = "C7NXqPcarK1UD8zKr"; // 👈 replace
 
     // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+    emailjs
+      .send(
+        serviceID,
+        templateID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        publicKey
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setIsSubmitting(false);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message. Try again.");
+        setIsSubmitting(false);
       });
-      alert("Message sent successfully!");
-    }, 1500);
   };
 
   const contactInfo = [
@@ -90,7 +109,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg">{info.title}</h3>
-                    <p className="text-foreground/70">{info.value}</p>
+                    <p className="text-foreground/70 break-all">{info.value}</p>
                   </div>
                 </a>
               </Card>
@@ -99,43 +118,28 @@ const Contact = () => {
             <div className="mt-8 pt-8 border-t border-primary/10">
               <h3 className="text-lg font-medium mb-4">Connect With Me</h3>
               <div className="flex space-x-4">
-                {/* {["github", "linkedin"].map(
-                  (social) => (
-                    <a
-                      key={social}
-                      href={`#${social}`}
-                      className="bg-secondary hover:bg-primary/20 p-2 rounded-full transition-colors"
-                    >
-                      <img
-                        src={`https://cdn.simpleicons.org/${social}`}
-                        alt={social}
-                        className="w-5 h-5"
-                      />
-                    </a>
-                  )
-                )} */}
                 <a
-              href="#"
-              className="text-foreground/70 hover:text-primary transition-colors"
-              aria-label="Github"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="#"
-              className="text-foreground/70 hover:text-primary transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-           
-            <a
-              href="#"
-              className="text-foreground/70 hover:text-primary transition-colors"
-              aria-label="Email"
-            >
-              <Mail size={20} />
-            </a>
+                  href="https://github.com/nazerhussain86"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                  aria-label="Github"
+                >
+                  <Github size={20} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/nazer-hussain-abdul-raheem-9126162a3/"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+
+                <a
+                  href="#"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                  aria-label="Email"
+                >
+                  <Mail size={20} />
+                </a>
               </div>
             </div>
           </div>

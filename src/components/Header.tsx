@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -18,9 +17,7 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
 
   const navLinks = [
@@ -34,44 +31,34 @@ const Header = () => {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
-  const handleNavClick = (id) => {
+
+  const handleNavClick = (id: string) => {
     const section = document.querySelector(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // Close mobile menu if open
+      setIsMenuOpen(false);
     }
   };
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
-        ? "bg-[#0f172a]/90 backdrop-blur-md shadow-md py-4"
-        : "bg-transparent py-6"
+        ? "bg-[#0f172a]/90 backdrop-blur-md shadow-md py-4 text-white"
+        : "bg-transparent py-6 text-foreground"
         }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* <a href="#home" className="text-2xl font-bold gradient-text">
-          CodeCraft
-        </a> */}
-        <a href="#home" className="text-2xl font-bold gradient-text">
+        <span className="text-2xl font-bold gradient-text cursor-pointer" onClick={() => handleNavClick("#home")}>
           Portfolio
-        </a>
+        </span>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            // <a
-            //   key={link.name}
-            //   href={link.href}
-            //   className={`transition-colors ${scrolled ? "text-white hover:text-primary" : "text-foreground/80 hover:text-primary"
-            //     }`}
-            // >
-            //   {link.name}
-            // </a>
             <button
               key={link.name}
               onClick={() => handleNavClick(link.href)}
-              className="text-foreground/80 hover:text-primary py-2 text-left"
+              className={`py-2 text-left ${scrolled ? 'text-white' : 'text-foreground/80'} hover:text-primary`}
             >
               {link.name}
             </button>
@@ -83,16 +70,17 @@ const Header = () => {
               <Sun size={20} className={scrolled ? "text-white" : ""} />
             )}
           </Button>
-          {/* <Button>Hire Me</Button> */}
         </nav>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-2">
-          <Button onClick={toggleTheme} variant="ghost" size="icon" className="mr-2">
+          <Button onClick={toggleTheme} variant="ghost" size="icon"
+            className="mr-2"
+          >
             {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
           </Button>
           <button
-            className="text-foreground/80 hover:text-primary"
+            className={`text-foreground/80 hover:text-primary ${scrolled ? "text-white" : ""}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -105,16 +93,17 @@ const Header = () => {
         <div className="md:hidden bg-background/95 backdrop-blur-md w-full">
           <nav className="container mx-auto px-6 py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                className="text-foreground/80 hover:text-primary py-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleNavClick(link.href)}
+                className="text-foreground/80 hover:text-primary text-left py-2"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
-            <Button className="mt-4">Hire Me</Button>
+            <Button className="mt-4" onClick={() => handleNavClick("#contact")}>
+              Hire Me
+            </Button>
           </nav>
         </div>
       )}

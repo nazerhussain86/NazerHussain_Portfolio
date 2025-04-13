@@ -74,7 +74,52 @@ const About = () => {
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-t from-blue-400/5 to-transparent rounded-full blur-3xl -z-10"></div>
 
       <div className="container mx-auto">
-        <h2 className="section-title gradient-text text-center">About Me</h2>
+        {/* Testimonial Carousel */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold mb-6 text-center">The Domains of My Expertise</h3>
+          <Carousel className="w-full max-w-3xl mx-auto">
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index}>
+                  <div className="bg-background/80 backdrop-blur-sm p-8 md:p-10 rounded-2xl border border-primary/10 shadow-lg flex flex-col items-center text-center">
+                    <div className="mb-4">
+                      <svg width="42" height="30" className="text-primary/60 mx-auto">
+                        <path
+                          fill="currentColor"
+                          d="M12.284 0L0 12.284V30h17.716V12.284H5.431L17.716 0H12.284zm24.283 0L24.284 12.284V30H42V12.284H29.715L42 0h-5.433z"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-lg mb-6 italic">{testimonial.text}</p>
+                    <div className="mt-auto">
+                      <p className="font-semibold">{testimonial.author}</p>
+                      <p className="text-sm text-foreground/60">{testimonial.position}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-2 mt-4">
+              <CarouselPrevious className="static transform-none translate-y-0 mx-2" />
+              <CarouselNext className="static transform-none translate-y-0 mx-2" />
+            </div>
+          </Carousel>
+        </div>
+        {/* Experience Stats */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          {experience.map((item, index) => (
+            <div
+              key={index}
+              className="bg-background/70 p-8 rounded-xl shadow-lg border border-primary/20 card-hover glass-effect group"
+            >
+              <h3 className="text-4xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform">
+                {item.number}
+              </h3>
+              <p className="text-foreground/70">{item.text}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="mt-10 section-title gradient-text text-center">About Me</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           {/* Image Column */}
@@ -129,52 +174,9 @@ const About = () => {
           </div>
         </div>
 
-        {/* Testimonial Carousel */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-bold mb-6 text-center">The Domains of My Expertise</h3>
-          <Carousel className="w-full max-w-3xl mx-auto">
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index}>
-                  <div className="bg-background/80 backdrop-blur-sm p-8 md:p-10 rounded-2xl border border-primary/10 shadow-lg flex flex-col items-center text-center">
-                    <div className="mb-4">
-                      <svg width="42" height="30" className="text-primary/60 mx-auto">
-                        <path
-                          fill="currentColor"
-                          d="M12.284 0L0 12.284V30h17.716V12.284H5.431L17.716 0H12.284zm24.283 0L24.284 12.284V30H42V12.284H29.715L42 0h-5.433z"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-lg mb-6 italic">{testimonial.text}</p>
-                    <div className="mt-auto">
-                      <p className="font-semibold">{testimonial.author}</p>
-                      <p className="text-sm text-foreground/60">{testimonial.position}</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center gap-2 mt-4">
-              <CarouselPrevious className="static transform-none translate-y-0 mx-2" />
-              <CarouselNext className="static transform-none translate-y-0 mx-2" />
-            </div>
-          </Carousel>
-        </div>
 
-        {/* Experience Stats */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          {experience.map((item, index) => (
-            <div
-              key={index}
-              className="bg-background/70 p-8 rounded-xl shadow-lg border border-primary/20 card-hover glass-effect group"
-            >
-              <h3 className="text-4xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform">
-                {item.number}
-              </h3>
-              <p className="text-foreground/70">{item.text}</p>
-            </div>
-          ))}
-        </div>
+
+
       </div>
     </section>
   );

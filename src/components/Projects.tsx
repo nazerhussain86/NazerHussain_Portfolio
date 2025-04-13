@@ -27,12 +27,12 @@ const Projects = () => {
         "Automated Response: Generates and sends tailored replies addressing queries effectively."
       ],
       technologies: [
-        ".NET Framework", 
-        "C#", 
-        "Python", 
-        "IMAP", 
-        "WinForms", 
-        "AI", 
+        ".NET Framework",
+        "C#",
+        "Python",
+        "IMAP",
+        "WinForms",
+        "AI",
         "SQL Server"
       ],
       icon: Mail,
@@ -52,14 +52,14 @@ const Projects = () => {
         "User Roles and Permissions: Secure access control for various stakeholders."
       ],
       technologies: [
-        ".NET Framework", 
-        "ASP.NET MVC", 
-        "Bootstrap", 
-        "HTML", 
-        "jQuery", 
-        "C#", 
-        "CSS", 
-        "XML", 
+        ".NET Framework",
+        "ASP.NET MVC",
+        "Bootstrap",
+        "HTML",
+        "jQuery",
+        "C#",
+        "CSS",
+        "XML",
         "SQL Server"
       ],
       icon: Code,
@@ -78,12 +78,12 @@ const Projects = () => {
         "API Development: Creating web APIs for document processing workflows."
       ],
       technologies: [
-        "Python", 
-        "Pandas", 
-        "AI", 
-        "OCR", 
-        "EasyOCR", 
-        "C#", 
+        "Python",
+        "Pandas",
+        "AI",
+        "OCR",
+        "EasyOCR",
+        "C#",
         "SQL Server"
       ],
       icon: FileText,
@@ -97,8 +97,7 @@ const Projects = () => {
           Professional Projects
         </h2>
         <p className="text-center text-foreground/70 max-w-3xl mx-auto mb-16">
-          A selection of my professional development work at SCMCube Technologies, demonstrating
-          my expertise in backend development, API integration, and application design.
+          A selection of my professional development work, showcasing expertise in backend development, API integration, and scalable application design.
         </p>
 
         <div className="space-y-12">
@@ -116,17 +115,17 @@ const Projects = () => {
                     <h3 className="text-xl font-semibold">{project.title}</h3>
                   </div>
                   <p className="text-sm text-foreground/70 mb-2">{project.subtitle}</p>
-                  
+
                   <div className="flex items-center gap-2 text-sm text-foreground/70 mb-4">
                     <Calendar size={14} />
                     <span>{project.period}</span>
                   </div>
-                  
+
                   <div className="flex items-center gap-2 text-sm text-foreground/70 mb-6">
                     <Database size={14} />
                     <span>{project.company}</span>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {project.technologies.map((tech, techIndex) => (
                       <Badge key={techIndex} variant="outline" className="bg-background/50">
@@ -135,16 +134,16 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="md:col-span-2 p-6">
                   <CardDescription className="text-base mb-6">{project.description}</CardDescription>
-                  
+
                   <h4 className="text-sm font-semibold text-primary mb-3">Key Features:</h4>
                   <ul className="space-y-2 text-sm">
                     {project.features.map((feature, featureIndex) => {
                       // Split the feature into title and description
                       const [title, description] = feature.split(': ');
-                      
+
                       return (
                         <li key={featureIndex} className="list-item">
                           <span className="font-medium">{title}:</span>{' '}

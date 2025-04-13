@@ -128,16 +128,7 @@ const SkillsAndCertifications = () => {
       icon: <Code className="h-10 w-10 text-primary" />,
       logo: "/guvi-logo.svg",
     },
-    {
-      id: "c7",
-      title: "SaWiT.AI Challenge",
-      issuer: "GUVI Geek Networks, IITM Research Park",
-      date: "Sep 2024",
-      credentialId: "324P4265uv71758xq1",
-      skills: ["Python (Programming Language)", "Artificial Intelligence (AI)"],
-      icon: <GraduationCap className="h-10 w-10 text-primary" />,
-      logo: "/guvi-logo.svg",
-    },
+   
   ];
 
   const skillCategories: SkillCategory[] = [
@@ -146,12 +137,13 @@ const SkillsAndCertifications = () => {
       name: "Frontend",
       icon: <Globe className="h-5 w-5" />,
       skills: [
-        { name: "React.js", level: 90 },
-        { name: "TypeScript", level: 85 },
         { name: "HTML/CSS", level: 95 },
+        { name: "Jquery 3 / Javascript", level: 95 },
+        { name: "React Js", level: 90 },
+        { name: "TypeScript", level: 85 },
         { name: "Tailwind CSS", level: 85 },
-        { name: "Next.js", level: 80 },
-        { name: "Redux", level: 75 },
+        { name: "BootStrap 5", level: 85 },
+
       ],
     },
     {
@@ -159,12 +151,12 @@ const SkillsAndCertifications = () => {
       name: "Backend",
       icon: <Server className="h-5 w-5" />,
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: ".NET Core", level: 90 },
-        { name: "Express.js", level: 80 },
         { name: "Python", level: 75 },
+        { name: "C#", level: 80 },
+        { name: ".NET Core", level: 90 },
+        { name: "MVC Architecture", level: 85 },
         { name: "RESTful APIs", level: 90 },
-        { name: "GraphQL", level: 70 },
+        { name: "HTTP Client", level: 70 },
       ],
     },
     {
@@ -173,39 +165,10 @@ const SkillsAndCertifications = () => {
       icon: <Database className="h-5 w-5" />,
       skills: [
         { name: "SQL Server", level: 90 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "Redis", level: 70 },
-        { name: "Firebase", level: 75 },
-        { name: "ORM Tools", level: 85 },
+        { name: "SQLite 3", level: 70 },
+
       ],
     },
-    // {
-    //   id: "devops",
-    //   name: "DevOps",
-    //   icon: <Settings className="h-5 w-5" />,
-    //   skills: [
-    //     { name: "Docker", level: 80 },
-    //     { name: "CI/CD", level: 75 },
-    //     { name: "AWS", level: 70 },
-    //     { name: "Azure", level: 85 },
-    //     { name: "Git", level: 95 },
-    //     { name: "Linux", level: 70 },
-    //   ],
-    // },
-    // {
-    //   id: "mobile",
-    //   name: "Mobile",
-    //   icon: <Smartphone className="h-5 w-5" />,
-    //   skills: [
-    //     { name: "React Native", level: 80 },
-    //     { name: "Flutter", level: 65 },
-    //     { name: "Mobile UX", level: 75 },
-    //     { name: "App Performance", level: 70 },
-    //     { name: "Native APIs", level: 65 },
-    //     { name: "App Store Deployment", level: 75 },
-    //   ],
-    // },
     {
       id: "other",
       name: "Other",
@@ -227,11 +190,11 @@ const SkillsAndCertifications = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 to-background -z-10"></div>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-      
+
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-20 left-20 w-60 h-60 bg-blue-400/5 rounded-full blur-3xl -z-10"></div>
-      
+
       <div className="container mx-auto">
         <h2 className="section-title gradient-text text-center">
           Technical Skills & Certifications
@@ -242,16 +205,16 @@ const SkillsAndCertifications = () => {
 
         <div className="flex justify-center mb-10">
           <div className="inline-flex p-1 rounded-lg bg-secondary/50 shadow-inner">
-            <Button 
-              variant={activeView === "skills" ? "default" : "ghost"} 
+            <Button
+              variant={activeView === "skills" ? "default" : "ghost"}
               className={`rounded-md ${activeView === "skills" ? "shadow-md" : ""}`}
               onClick={() => setActiveView("skills")}
             >
               <TrendingUp className="mr-2 h-4 w-4" />
               Skills
             </Button>
-            <Button 
-              variant={activeView === "certifications" ? "default" : "ghost"} 
+            <Button
+              variant={activeView === "certifications" ? "default" : "ghost"}
               className={`rounded-md ${activeView === "certifications" ? "shadow-md" : ""}`}
               onClick={() => setActiveView("certifications")}
             >
@@ -337,9 +300,9 @@ const SkillsAndCertifications = () => {
                     <div className="space-y-1">
                       <CardTitle className="text-xl group-hover:text-primary transition-colors">{cert.title}</CardTitle>
                       <CardDescription className="flex items-center gap-2">
-                        <span>{cert.issuer}</span>
+                        {/* <span>{cert.issuer}</span>
                         <span className="text-xs">•</span>
-                        <span>{cert.date}</span>
+                        <span>{cert.date}</span> */}
                       </CardDescription>
                     </div>
                   </CardHeader>
@@ -348,6 +311,14 @@ const SkillsAndCertifications = () => {
                       <div className="flex items-center text-sm text-foreground/70">
                         <CheckSquare className="h-4 w-4 mr-2 text-primary" />
                         <span>Credential ID: {cert.credentialId}</span>
+                      </div>
+                      <div className="flex items-center text-sm text-foreground/70">
+                        <CheckSquare className="h-4 w-4 mr-2 text-primary" />
+                        <span>@ {cert.issuer}</span>
+                      </div>
+                      <div className="flex items-center text-sm text-foreground/70">
+                        <CheckSquare className="h-4 w-4 mr-2 text-primary" />
+                        <span>Date : {cert.date}</span>
                       </div>
                       <div>
                         <h4 className="text-sm font-medium mb-2 flex items-center justify-between">
@@ -395,7 +366,7 @@ const SkillsAndCertifications = () => {
               </Badge>
               <Badge className="bg-primary/20 text-primary hover:bg-primary/30 border-none shadow-sm hover:shadow transition-all">
                 <Award className="h-3 w-3 mr-1" />
-                Coursera
+                GUVI
               </Badge>
             </div>
           </div>
