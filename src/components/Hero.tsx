@@ -125,7 +125,7 @@ const Hero = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 md:justify-end hidden md:block">
           <img
-            src="/home/hussain/React Dev/NazerHussain_Portfolio/public/intro1.png"
+            src="intro1.png"
             // Example adjustments:
             style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
             alt="Portfolio Cartoon"
