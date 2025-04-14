@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Mail, Download, Github, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const programmingLanguages = [
@@ -109,14 +109,30 @@ const Hero = () => {
           <div className="mt-8 flex items-center gap-4">
             <p className="text-sm text-foreground/60">Find me on:</p>
             <div className="flex gap-3">
-              <a href="#" className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 transition-colors">
-                <Github size={18} />
+              <a
+                href="https://github.com/nazerhussain86"
+                target="_blank"
+                className="text-foreground/70 hover:text-primary transition-colors"
+                aria-label="Github"
+              >
+                <Github size={20} />
               </a>
-              <a href="#" className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 transition-colors">
-                <Linkedin size={18} />
+              <a
+                href="www.linkedin.com/in/nazerhussain"
+                target="_blank"
+                className="text-foreground/70 hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
               </a>
-              <a href="#" className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 transition-colors">
-                <Twitter size={18} />
+
+              <a
+                href="mailto:nazerhussain1999@gmail.com"
+                target="_blank"
+                className="text-foreground/70 hover:text-primary transition-colors"
+                aria-label="Email"
+              >
+                <Mail size={20} />
               </a>
             </div>
           </div>
