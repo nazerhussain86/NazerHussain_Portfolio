@@ -125,7 +125,7 @@ const Hero = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 md:justify-end hidden md:block">
           <img
-            src="intro1.png"
+            src="/home/hussain/React Dev/NazerHussain_Portfolio/public/intro1.png"
             // Example adjustments:
             style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
             alt="Portfolio Cartoon"
@@ -143,7 +143,7 @@ const Hero = () => {
             : "text-foreground/50 hover:text-primary"
             }`}
         >
-          <span className="mb-2">Scroll Down</span>
+          <span className={`mb-2${scrolled ? 'hidden' : ''}`}>Scroll Down</span>
           <div
             className={`p-2 rounded-full border border-foreground/20 hover:border-primary/50 transition-colors ${scrolled ? 'hidden' : ''}`}
           >

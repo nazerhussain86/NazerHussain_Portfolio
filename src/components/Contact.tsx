@@ -119,13 +119,15 @@ const Contact = () => {
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/nazerhussain86"
+                  target="_blank"
                   className="text-foreground/70 hover:text-primary transition-colors"
                   aria-label="Github"
                 >
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/nazer-hussain-abdul-raheem-9126162a3/"
+                  href="www.linkedin.com/in/nazerhussain"
+                  target="_blank"
                   className="text-foreground/70 hover:text-primary transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -133,7 +135,8 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="#"
+                  href="mailto:nazerhussain1999@gmail.com"
+                  target="_blank"
                   className="text-foreground/70 hover:text-primary transition-colors"
                   aria-label="Email"
                 >

@@ -14,29 +14,30 @@ import { Calendar, Code, Database, FileText, Mail } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Automated Email Service",
-      subtitle: "Windows Application",
-      period: "Dec 2024 - Present",
+      title: "Document OCR Automation",
+      subtitle: "Backend Development & API Integration",
+      period: "Dec 2023 - Present",
       company: "SCMCube Technologies",
       description:
-        "An automated email service designed to streamline email management by reading incoming emails, extracting relevant information, and storing it in a SQL Server database.",
+        "A backend-focused project for document processing with OCR capabilities, involving file format conversion, text processing, and web API development.",
       features: [
-        "Email Retrieval: Automatically reads emails from a specified mailbox, filtering messages from designated senders or based on predefined criteria.",
-        "Data Extraction and Storage: Extracts key information from emails and stores it in a SQL Server database.",
-        "Query Analysis: Analyzes email content to identify sender's query using rule-based logic or NLP.",
-        "Automated Response: Generates and sends tailored replies addressing queries effectively."
+        "File Format Conversion: Converting various document formats for processing.",
+        "OCR Processing: Extracting text from images and documents using EasyOCR.",
+        "Text Analysis: Processing extracted text for structured data.",
+        "API Development: Creating web APIs for document processing workflows."
       ],
       technologies: [
-        ".NET Framework",
-        "C#",
         "Python",
-        "IMAP",
-        "WinForms",
+        "Pandas",
         "AI",
+        "OCR",
+        "EasyOCR",
+        "C#",
         "SQL Server"
       ],
-      icon: Mail,
+      icon: FileText,
     },
+
     {
       title: "Web Application",
       subtitle: "Import/Export Management System",
@@ -65,28 +66,28 @@ const Projects = () => {
       icon: Code,
     },
     {
-      title: "Document OCR Automation",
-      subtitle: "Backend Development & API Integration",
-      period: "Dec 2023 - Present",
+      title: "Automated Email Service",
+      subtitle: "Windows Application",
+      period: "Dec 2024 - Present",
       company: "SCMCube Technologies",
       description:
-        "A backend-focused project for document processing with OCR capabilities, involving file format conversion, text processing, and web API development.",
+        "An automated email service designed to streamline email management by reading incoming emails, extracting relevant information, and storing it in a SQL Server database.",
       features: [
-        "File Format Conversion: Converting various document formats for processing.",
-        "OCR Processing: Extracting text from images and documents using EasyOCR.",
-        "Text Analysis: Processing extracted text for structured data.",
-        "API Development: Creating web APIs for document processing workflows."
+        "Email Retrieval: Automatically reads emails from a specified mailbox, filtering messages from designated senders or based on predefined criteria.",
+        "Data Extraction and Storage: Extracts key information from emails and stores it in a SQL Server database.",
+        "Query Analysis: Analyzes email content to identify sender's query using rule-based logic or NLP.",
+        "Automated Response: Generates and sends tailored replies addressing queries effectively."
       ],
       technologies: [
-        "Python",
-        "Pandas",
-        "AI",
-        "OCR",
-        "EasyOCR",
+        ".NET Framework",
         "C#",
+        "Python",
+        "IMAP",
+        "WinForms",
+        "AI",
         "SQL Server"
       ],
-      icon: FileText,
+      icon: Mail,
     },
   ];
 
