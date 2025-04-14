@@ -2,7 +2,7 @@
   "homepage": "https://nazerhussain86.github.io/NazerHussain_Portfolio",
   "name": "nazer_hussain",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
