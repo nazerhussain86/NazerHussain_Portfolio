@@ -29,8 +29,10 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/1fD2TSomg9RsSiZC_qAtx7TE506sVeoSv/view?usp=drive_link";
-    link.download = "NazerHussainResume.pdf";
+    link.href = "Nazer Hussain_March_2025.pdf";
+    link.download = "Resume.pdf";
+    link.target = "_blank"; // Optional: open in new tab
+    link.rel = "noopener noreferrer"; // Security
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -159,7 +161,7 @@ const Hero = () => {
             : "text-foreground/50 hover:text-primary"
             }`}
         >
-          <span className={`mb-2${scrolled ? 'hidden' : ''}`}>Scroll Down</span>
+          <span className={`mb-2 ${scrolled ? 'hidden' : ''}`}>Scroll Down</span>
           <div
             className={`p-2 rounded-full border border-foreground/20 hover:border-primary/50 transition-colors ${scrolled ? 'hidden' : ''}`}
           >
