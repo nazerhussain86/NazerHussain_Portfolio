@@ -28,11 +28,9 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const serviceID = "service_1mqwy5a"; // 👈 replace
-    const templateID = "template_qos3jlw"; // 👈 replace
-    const publicKey = "C7NXqPcarK1UD8zKr"; // 👈 replace
-
-    // Simulate form submission
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     emailjs
       .send(
         serviceID,
