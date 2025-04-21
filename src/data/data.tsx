@@ -30,7 +30,7 @@ interface SkillCategory {
 }
 const Head = [
     { name: "Nazer Hussain" },
-    { headerDev: "NazerHussain.dev" }
+    { headerDev: "Nazer.dev" }
 ];
 const experience = [
     { number: "2+", text: "Years of Full Stack Development" },
