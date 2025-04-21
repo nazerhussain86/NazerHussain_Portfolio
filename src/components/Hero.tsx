@@ -1,22 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Mail, Download, Github, Linkedin, Twitter } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-const programmingLanguages = [
-  { name: "C#", color: "bg-gradient-to-r from-purple-500 to-blue-600" },
-  { name: "MVC", color: "bg-gradient-to-r from-blue-500 to-cyan-400" },
-  { name: "Python", color: "bg-gradient-to-r from-blue-600 to-green-500" },
-  { name: "React", color: "bg-gradient-to-r from-cyan-400 to-blue-500" },
-  { name: "JavaScript", color: "bg-gradient-to-r from-yellow-400 to-amber-500" },
-  { name: "TypeScript", color: "bg-gradient-to-r from-blue-400 to-indigo-500" },
-  { name: "Node.js", color: "bg-gradient-to-r from-green-500 to-emerald-600" },
-  { name: "HTML", color: "bg-gradient-to-r from-orange-500 to-red-500" },
-  { name: "CSS", color: "bg-gradient-to-r from-blue-400 to-indigo-400" },
-  { name: "SQL", color: "bg-gradient-to-r from-sky-500 to-blue-600" },
-];
 
 const Hero = () => {
-  const floatingElementsRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import { Head } from "../data/data"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,7 +55,7 @@ const Header = () => {
         <a
           onClick={() => handleNavClick("#home")}
           className="text-2xl font-serif font-bold">
-          <span className="text-2xl font-bold gradient-text cursor-pointer">Nazer.dev</span>
+          <span className="text-2xl font-bold gradient-text cursor-pointer">{Head[1]?.headerDev}</span>
         </a>
 
         {/* Desktop Navigation */}

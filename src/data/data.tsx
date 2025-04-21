@@ -28,7 +28,10 @@ interface SkillCategory {
     icon: React.ReactNode;
     skills: { name: string; level: number }[];
 }
-
+const Head = [
+    { name: "Nazer Hussain" },
+    { headerDev: "NazerHussain.dev" }
+];
 const experience = [
     { number: "2+", text: "Years of Full Stack Development" },
     { number: "10+", text: "Certifications Achieved" },
@@ -340,6 +343,7 @@ const emailConfig = {
 // to import data in other components 
 
 export {
+    Head,
     experience,
     testimonials,
     certifications,
