@@ -89,7 +89,7 @@ const Hero = () => {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Hire Me
+              Let's Talk
             </Button>
 
           </div>
