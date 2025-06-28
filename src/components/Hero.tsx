@@ -130,7 +130,7 @@ const Hero = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 md:justify-end hidden md:block">
           <img
-            src="images.jpeg"
+            src="intro.png" // Replace with your image path
             // Example adjustments:
             style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
             alt="Portfolio Hero"
