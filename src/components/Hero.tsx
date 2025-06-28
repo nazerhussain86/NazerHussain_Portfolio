@@ -16,8 +16,8 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "Nazer Hussain_March_2025.pdf";
-    link.download = "Resume.pdf";
+    link.href = "NazerHussainAbdulraheem_June2025.pdf";
+    link.download = "NazerHussainAR.pdf";
     link.target = "_blank"; // Optional: open in new tab
     link.rel = "noopener noreferrer"; // Security
     document.body.appendChild(link);
@@ -130,10 +130,10 @@ const Hero = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 md:justify-end hidden md:block">
           <img
-            src="intro1.png"
+            src="images.jpeg"
             // Example adjustments:
             style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
-            alt="Portfolio Cartoon"
+            alt="Portfolio Hero"
             className="max-w-md rounded-lg shadow-md mx-auto md:mx-0"
           />
         </div>

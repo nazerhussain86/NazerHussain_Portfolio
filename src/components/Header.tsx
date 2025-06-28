@@ -102,7 +102,7 @@ const Header = () => {
               <button
                 key={link.name}
                 onClick={() => handleNavClick(link.href)}
-                className="text-foreground/80 hover:text-primary text-left py-2"
+                className="text-foreground/80 hover:text-primary text-center py-2"
               >
                 {link.name}
               </button>
