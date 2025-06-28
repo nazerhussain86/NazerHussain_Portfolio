@@ -78,9 +78,9 @@ const Hero = () => {
               onClick={handleDownloadCV}
               className="shine-effect hover:bg-primary/80 transition-colors btn-shine rounded-full"
             >
-              <Download size={18} /> Download CV
+              <Download size={18} /> My CV
             </Button>
-            <Button
+            {/* <Button
               size="lg"
               className="shine-effect hover:bg-primary/80 transition-colors pulse-button btn-shine rounded-full"
               onClick={() => {
@@ -90,7 +90,7 @@ const Hero = () => {
               }}
             >
               Let's Talk
-            </Button>
+            </Button> */}
 
           </div>
 
@@ -130,10 +130,10 @@ const Hero = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 md:justify-end hidden md:block">
           <img
-            src="intro.png" // Replace with your image path
+            src="intro1.png"
             // Example adjustments:
             style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
-            alt="Portfolio Hero"
+            alt="Portfolio Cartoon"
             className="max-w-md rounded-lg shadow-md mx-auto md:mx-0"
           />
         </div>
